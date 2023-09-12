@@ -1,0 +1,14 @@
+name: Test-pull-requests
+
+on: [pull_request]
+
+jobs:
+  list-files:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: List before copy
+      run: ls -al
+    - uses: actions/checkout@v2
+    - name: List after copy
+      run: ls -al
